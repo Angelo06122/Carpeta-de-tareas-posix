@@ -1,1 +1,1 @@
-![Demostración de tarea981](./demo_tarea981.svg)
+![tarea981](./demo_tarea981.svg)
